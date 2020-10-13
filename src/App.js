@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      moreName: [
+      moreNames: [
         {
           name:'Masud Rana'
         },
@@ -29,13 +29,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            {this.state.name}
-        </p>
-          <button onClick={() => this.setState({name: "I  don't Know"})}>Click Here</button>
-        </header>
+        {
+          this.state.moreNames.map(i => <h1>{i.name}</h1>)
+        }
       </div>
     );
   }
