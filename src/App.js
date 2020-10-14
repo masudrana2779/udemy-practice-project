@@ -1,36 +1,24 @@
 
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      moreNames: [
-        {
-          name:'Masud Rana'
-        },
-        {
-          name:'Rana'
-        },
-        {
-          name:'Masud'
-        },
-        {
-          name:'Md. Masud Rana'
-        },
-        {
-          name:'Md. Rana'
-        }
-      ]
+      moreNames: []
     }
+  }
+  componentDidMount(){
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(Response => Response.json())
+    .then(users => this.setState({moreNames: users}))
   }
   render() {
     return (
       <div className="App">
         {
-          this.state.moreNames.map(i => <h1>{i.name}</h1>)
+          this.state.moreNames.map(i => <h1 key={i.id}>{i.name}</h1>)
         }
       </div>
     );
