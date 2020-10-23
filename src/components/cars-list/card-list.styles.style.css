@@ -1,0 +1,20 @@
+.App,.cardListMainBox {
+    padding: 100px 0;
+}
+.cardList {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.cardListItem {
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: rgb(121 212 161);
+    transition: all 0.5s;
+}
+.cardListItem:hover {
+    transform: translateY(-5px);
+}
