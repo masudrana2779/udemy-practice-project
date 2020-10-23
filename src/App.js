@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Wow from "./wow";
 import { CardList } from "./components/cars-list/card-list.component";
+import { SearchBox } from './components/searchBox/searchBox.component';
 
 
 
@@ -30,7 +31,10 @@ class App extends Component {
     )
     return (
       <div className="App">
-        <input type="search" placeholder="search by name" onChange={e => { this.setState({ searchField: e.target.value }) }} />
+        <SearchBox
+          placeholder="search by name"
+          searchHandelar={searchHandelar => { this.setState({ searchField: searchHandelar.target.value }) }}
+        />
         <CardList moreNames={filteredMoreNames} />
       </div>
     );
