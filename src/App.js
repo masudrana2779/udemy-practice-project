@@ -31,6 +31,7 @@ class App extends Component {
     )
     return (
       <div className="App">
+        <h2>This is my first Practice</h2>
         <SearchBox
           placeholder="search by name"
           searchHandelar={searchHandelar => { this.setState({ searchField: searchHandelar.target.value }) }}

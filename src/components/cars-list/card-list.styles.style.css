@@ -1,5 +1,27 @@
-.App,.cardListMainBox {
+@import url("https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap");
+.App {
     padding: 100px 0;
+    background: linear-gradient(to left, #3e197f, #5d4708, #795548);
+}
+.App h2 {
+    color: #fff;
+    font-size: 72px;
+    font-family: "Bigelow Rules", cursive;
+}
+.cardListMainBox {
+    padding: 50px 0;
+}
+.searchInput {
+    padding: 10px 20px;
+    max-width: 350px;
+    width: 100%;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    height: 54px;
+    font-size: 24px;
 }
 .cardList {
     width: 90vw;
